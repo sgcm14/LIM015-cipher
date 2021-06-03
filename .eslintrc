@@ -1,12 +1,12 @@
 {
     "env": {
-      "browser": true
+      "browser": true   /* El objetivo del código es ejecutar en navegadores */
     },
     "parserOptions": {
-      "ecmaVersion": 2018,
-      "sourceType": "module"
+      "ecmaVersion": 2018,    /* Establece la versión de ECMAScript que se usará */
+      "sourceType": "module"  /* Indica si se usan módulos ESM o solo scripts */
     },
-    "extends": "eslint:recommended",
+    "extends": "eslint:recommended",  /* Reglas marcadas con ✓ en eslint.org/docs/rules/ */
     "rules": {
       "no-console": "warn"
     }
