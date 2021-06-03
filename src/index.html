@@ -7,36 +7,44 @@
   </head>
   <body>
     <div id="root">
-      <h1>Bienvenid@s a Mensajes Seguros</h1>
-        <div id="principal" class="box">
-            <p>
-              Inserte n° de desplazamiento: 
-            </p>
+      <header>
+        <h1>Bienvenid@s a Mensajes Seguros</h1>
+      </header>
 
-            <p>
-              <input type="text" id="offset" class="textbox">
-            </p>
+      <section>
+          <div id="principal" class="box">
+              <p>
+                Inserte n° de desplazamiento: 
+              </p>
 
-            <p>
-              <input type="text" id="mensaje" class="textbox" placeholder="Escribir mensaje para cifrar/ descifrar">
-            </p>
-        </div>
-        <div id="botones" class="box">
-            <p>
-              <button>Cifrar</button> 
-              <button>Limpiar</button> 
-              <button>Descifrar</button>
-            </p>
-        </div>
-        <div id="resultado" class="box">
-            <p>
-              Mensaje: 
-            </p>
+              <p>
+                <input type="text" id="offset" class="textbox">
+              </p>
 
-            <p>
-              <input type="text" id="menResultado" class="textbox">
-            </p>
-        </div>
+              <p>
+                <textarea  id="mensaje" class="textbox texto" rows="5" cols="50" placeholder="Escribir mensaje para cifrar/ descifrar"></textarea>
+              </p>
+          </div>
+          <div id="botones" class="box">
+              <p>
+                <button class="botones azul">Cifrar</button> 
+                <button class="botones violeta">Limpiar</button> 
+                <button class="botones azul">Descifrar</button>
+              </p>
+          </div>
+      </section>
+
+      <section>
+          <div id="resultado" class="box">
+              <p>
+                Mensaje: 
+              </p>
+
+              <p>
+                <textarea  id="menResultado" class="textbox texto" rows="5" cols="50" ></textarea>
+              </p>
+          </div>
+      </section>
     </div>
     <script src="index.js" type="module"></script>
   </body>
