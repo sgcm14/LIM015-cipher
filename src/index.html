@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Cesar Cipher</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet"/>
   </head>
   <body>
     <div id="root">
@@ -12,36 +14,34 @@
       </header>
 
       <section>
-          <div id="principal" class="box">
+          <div id="ingresoDatos" class="box">
               <p>
                 Inserte n° de desplazamiento: 
               </p>
 
               <p>
-                <input type="text" id="offset" class="textbox">
+                <input type="number" id="offset" class="textbox"/>
               </p>
 
               <p>
-                <textarea  id="mensaje" class="textbox texto" rows="5" cols="50" placeholder="Escribir mensaje para cifrar/ descifrar"></textarea>
+                <textarea  id="mensaje" class="textbox" rows="5" cols="50" placeholder="Escribir mensaje para cifrar/ descifrar"></textarea>
               </p>
           </div>
           <div id="botones" class="box">
-              
                 <button class="botones azul" id="btnCifrar">Cifrar</button> 
                 <button class="botones violeta" id="btnLimpiar">Limpiar</button> 
                 <button class="botones azul" id="btnDescifrar">Descifrar</button>
-              
           </div>
       </section>
 
       <section>
-          <div id="resultado" class="box">
+          <div id="resultadoDatos" class="box">
               <p>
                 Mensaje: 
               </p>
 
               <p>
-                <textarea  id="mensajeResultado" class="textbox texto" rows="5" cols="50" readonly="readonly" placeholder="Mensaje cifrado/ descifrado"></textarea>
+                <textarea  id="mensajeResultado" class="textbox" rows="5" cols="50" readonly="readonly" placeholder="Mensaje cifrado/ descifrado"></textarea>
               </p>
           </div>
       </section>

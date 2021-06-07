@@ -1,4 +1,6 @@
 body {
+    /*El cuerpo del html*/
+    font-family: 'Noto Sans JP', sans-serif;
     font-size: 16px;
     background-image: url('./img/fondo.jpg');
     background-size: cover;
@@ -6,6 +8,7 @@ body {
     background-position: center;
 }
 #root{
+    /*El div id="root" del html*/
     margin: 30px auto;
     padding: 20px;
     border-radius: 10px;
@@ -14,26 +17,31 @@ body {
     opacity: 0.8;
     width: 60%;
 }
-#resultado{
+#resultadoDatos{
+    /*El div id="resultadoDatos" del html*/
     border-top: 1px solid rgb(102, 74, 155);
     margin-top: 40px;
     padding-top: 20px;
 }
 .botones{
+    /*Los button class="botones" del html*/
     padding: 8px 15px;
     border: 0px;
     border-radius: 4px;
     cursor: pointer;
 }
 .azul{
+    /*Los button class="azul" del html*/
     background: rgb(13, 10, 245);
     color: #fff;
 }
 .violeta{
+    /*Los button class="violeta" del html*/
     background: rgb(102, 74, 155);
     color: #fff;
 }
-.texto{
+.textbox{
+    /*Los textarea class="textbox" del html*/
     resize: none;
 }
 
