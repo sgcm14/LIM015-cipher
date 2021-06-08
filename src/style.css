@@ -14,14 +14,14 @@ body {
     border-radius: 10px;
     text-align: center;
     background: #fff;
-    opacity: 0.8;
+    opacity: 0.9;
     width: 60%;
 }
 #resultadoDatos{
     /*El div id="resultadoDatos" del html*/
     border-top: 1px solid rgb(102, 74, 155);
-    margin-top: 40px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding-top: 10px;
 }
 .botones{
     /*Los button class="botones" del html*/
@@ -29,6 +29,10 @@ body {
     border: 0px;
     border-radius: 4px;
     cursor: pointer;
+}
+.botones:hover {
+    /*Los button class="botones" PSEUDOCLASE del html*/
+    opacity: 0.6;
 }
 .azul{
     /*Los button class="azul" del html*/
@@ -42,6 +46,18 @@ body {
 }
 .textbox{
     /*Los textarea class="textbox" del html*/
-    resize: none;
+    border: 1px  rgb(102, 74, 155) solid;
+    border-radius: 3px;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 13px;
 }
-
+.texto{
+    /*Los textarea class="texto" del html*/
+    resize: none;
+    width: 80%;
+    height: 100px;
+}
+#offset{
+    /*El input id="offset" del html*/
+    width: 50px;
+}
