@@ -1,7 +1,14 @@
 const cipher = {
   
+  /*validar:(offset)=>{
+     offset=offset.charCodeAt(0);
+    if(offset>=48 && offset<=57){}
+    else{
+      console.log("no es number")
+    }
+  },*/
   encode:(offset,frase) =>{
-    let indiceLetra="";
+    /*let indiceLetra="";
     let nuevaFrase="";
     for(let i=0;i<frase.length;i++){
       //obtiene el caracter en unicode y le suma el offset
@@ -12,11 +19,29 @@ const cipher = {
       //recibe el nuevo unicode y lo tansforma a letra
       nuevaFrase+=String.fromCharCode(indiceLetra);
     }
-    return nuevaFrase;
+    return nuevaFrase;*/
+   
+      
+    
+    let nuevaFrase="";
+      for(let i=0;i<frase.length;i++){
+          let indiceLetra=frase.charCodeAt(i);
+        if(indiceLetra>=65 && indiceLetra<=90){
+          indiceLetra=((indiceLetra-65+parseInt(offset))%26+65);
+          nuevaFrase+=String.fromCharCode(indiceLetra);
+        }
+        else if(indiceLetra>=97 && indiceLetra<=122){
+          indiceLetra=((indiceLetra-97+parseInt(offset))%26+97);
+          nuevaFrase+=String.fromCharCode(indiceLetra);
+        }
+      
+      }
+      return nuevaFrase;
+    
   },
 
   decode:(offset,frase) => {
-    let indiceLetra="";
+    /*let indiceLetra="";
     let nuevaFrase="";
     for(let i=0;i<frase.length;i++){
       //obtiene el caracter en unicode y le suma el offset
@@ -27,7 +52,21 @@ const cipher = {
       //recibe el nuevo unicode y lo tansforma a letra
       nuevaFrase+=String.fromCharCode(indiceLetra);
     }
-    return nuevaFrase;
+    return nuevaFrase;*/
+    let nuevaFrase="";
+      for(let i=0;i<frase.length;i++){
+          let indiceLetra=frase.charCodeAt(i);
+        if(indiceLetra>=65 && indiceLetra<=90){
+          indiceLetra=((indiceLetra+65-parseInt(offset))%26+65);
+          nuevaFrase+=String.fromCharCode(indiceLetra);
+        }
+        else if(indiceLetra>=97 && indiceLetra<=122){
+          indiceLetra=((indiceLetra+97+parseInt(offset))%26+97);
+          nuevaFrase+=String.fromCharCode(indiceLetra);
+        }
+      
+      }
+      return nuevaFrase;
   },
 
 };

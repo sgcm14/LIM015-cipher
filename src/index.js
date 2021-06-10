@@ -1,6 +1,5 @@
 import cipher from './cipher.js';
 //elegir los elementos que usare del html
-
 document.getElementById('offset').focus();
 
 const btnLimpiar = document.getElementById('btnLimpiar');
