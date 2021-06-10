@@ -17,7 +17,7 @@ btnCifrar.addEventListener('click', () => {
     let frase=document.getElementById('mensaje').value;
     
     let resultado = (cipher.encode(offset,frase));
-
+    //cipher.validar(offset);
     document.getElementById('mensajeResultado').value = resultado;
 });
 

@@ -2,7 +2,10 @@ const cipher = {
   
   /*validar:(offset)=>{
      offset=offset.charCodeAt(0);
-    if(offset>=48 && offset<=57){}
+    if(offset>=48 && offset<=57){
+      cipher.encode;
+      console.log("es number")
+    }
     else{
       console.log("no es number")
     }
@@ -34,6 +37,10 @@ const cipher = {
           indiceLetra=((indiceLetra-97+parseInt(offset))%26+97);
           nuevaFrase+=String.fromCharCode(indiceLetra);
         }
+        else if(indiceLetra>=32 && indiceLetra<=64){
+          indiceLetra=((indiceLetra-32+parseInt(offset))%33+32);
+          nuevaFrase+=String.fromCharCode(indiceLetra);
+        }
       
       }
       return nuevaFrase;
@@ -63,6 +70,10 @@ const cipher = {
         else if(indiceLetra>=97 && indiceLetra<=122){
           indiceLetra=((indiceLetra+97+parseInt(offset))%26+97);
           nuevaFrase+=String.fromCharCode(indiceLetra);
+        }
+        else if(indiceLetra>=32 && indiceLetra<=64){
+          
+          nuevaFrase=frase;
         }
       
       }
