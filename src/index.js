@@ -12,22 +12,25 @@ btnLimpiar.addEventListener('click', () => {
 
 const btnCifrar = document.getElementById('btnCifrar');
 btnCifrar.addEventListener('click', () => {
-   
     let offset =document.getElementById('offset').value;    
     let frase=document.getElementById('mensaje').value;
-    
+    /*if(cipher.validar(offset)){
+        alert("Ingrese un número");
+    }
+    else{
+        let resultado = (cipher.encode(offset,frase));
+        document.getElementById('mensajeResultado').value = resultado;
+    }*/
+        //llama a la función encode y le envia parámetros(offset y frase)
     let resultado = (cipher.encode(offset,frase));
-    //cipher.validar(offset);
     document.getElementById('mensajeResultado').value = resultado;
 });
 
 const btnDescifrar = document.getElementById('btnDescifrar');
 btnDescifrar.addEventListener('click', () => {
-   
     let offset =document.getElementById('offset').value;    
     let frase=document.getElementById('mensaje').value;
-    
+        //llama a la función decode y le envia parámetros(offset y frase)
     let resultado = (cipher.decode(offset,frase));
-
     document.getElementById('mensajeResultado').value = resultado;
 });
