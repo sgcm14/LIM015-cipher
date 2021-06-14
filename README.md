@@ -1,12 +1,16 @@
-# Cifrado César
+Cifrado César (Laboratoria)
+=============
+- Este proyecto se realizó siguiendo estas consideraciones [El Proyecto](https://github.com/Laboratoria/LIM015-cipher) , lo desarrollé dentro de las primeras semanas en [Laboratoria - Sede Lima](https://www.laboratoria.la/)
+
+- **Periodo :** 31 Mayo - 14 Junio, 2021
+> En este proyecto se usó HTML, CSS y JS
 
 ## Índice
 
 * [1. Preámbulo](#1-preámbulo)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+* [4. Criterios de aceptación mínimos del proyecto](#4-criterios-de-aceptación-mínimos-del-proyecto)
 * [6. Hacker edition](#6-hacker-edition)
 * [7. Consideraciones técnicas](#7-consideraciones-técnicas)
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
@@ -16,17 +20,12 @@
 
 ## 1. Preámbulo
 
-Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher)
-es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio
-César lo usaba para enviar órdenes secretas a sus generales en los campos de
-batalla.
+Cifrar significa codificar. El [cifrado César](https://en.wikipedia.org/wiki/Caesar_cipher) es uno de los primeros métodos de cifrado conocidos. El emperador romano Julio César lo usaba para enviar órdenes secretas a sus generales en los campos de batalla.
 
 ![caeser-cipher](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/2000px-Caesar3.svg.png)
 
 El cifrado césar es una de las técnicas más simples para cifrar un mensaje. Es
-un tipo de cifrado por sustitución, es decir que cada letra del texto original
-es reemplazada por otra que se encuentra un número fijo de posiciones
-(desplazamiento) más adelante en el mismo alfabeto.
+un tipo de cifrado por sustitución, es decir que cada letra del texto original es reemplazada por otra que se encuentra un número fijo de posiciones (desplazamiento) más adelante en el mismo alfabeto.
 
 Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
@@ -37,101 +36,79 @@ Por ejemplo, si usamos un desplazamiento (_offset_) de 3 posiciones:
 
 En la actualidad, todos los cifrados de sustitución simple se descifran con
 mucha facilidad y, aunque en la práctica no ofrecen mucha seguridad en la
-comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas
-más complejos de codificación, como el cifrado Vigenère, e incluso tiene
-aplicación en el sistema ROT13.
+comunicación por sí mismos; el cifrado César sí puede formar parte de sistemas más complejos de codificación, como el cifrado Vigenère, e incluso tiene aplicación en el sistema ROT13.
 
 ## 2. Resumen del proyecto
 
-¿Qué tengo que hacer exactamente? En este proyecto crearás una aplicación
-web que servirá para que el usuario pueda cifrar y descifrar un texto indicando
-un desplazamiento específico de caracteres (_offset_).
-
-La temática es libre. Tú debes pensar en qué situaciones de la vida real se
-necesitaría cifrar un mensaje y pensar en cómo debe ser esa experiencia de uso
-(qué pantallas, explicaciones, mensajes, colores, ¿marca?) etc. Algunas ideas de
-ejemplo:
-
-* Crear claves seguras para el email.
-* Encriptar/cifrar una tarjeta de crédito.
-* Herramienta de mensajería interna de una organización de derechos humanos en
-  una zona de conflicto.
-* Mensajería secreta para parejas.
+Esta web esta diseñada para poder cifrar/descifrar mensajes para enviar entre amigos, ya que hoy en día se habla de la privacidad y confidencialidad que muchas apps al parecer no están cumpliendo, ya que están accediendo a los mensajes enviados para así ofrecerles servicios o productos de acuerdo a lo que conversan a través de sus chats. Con el uso del cifrado y descifrado de mensajes se evitarían el ser espiados por estas empresas.
 
 ## 3. Objetivos de aprendizaje
 
-Aprenderás a construir una aplicación web que interactuará
-con lx usuarix final a través del navegador, utilizando HTML, CSS y JavaScript
-como tecnologías. 
-
-_No olvides a pensar en tu plan de acción - los objetivos que vas a prioritizar - y agrega tu plan en el README._
+Los objetivos en general son los siguientes, de los cuáles utilicé los que están con  ✓
 
 ### HTML y CSS
 
-* [ ] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
-* [ ] Uso de selectores de CSS.
+* [x] Uso de HTML semántico.
+* [x] Uso de selectores de CSS.
 
 ### DOM
 
-* [ ] Uso de selectores del DOM.
-* [ ] Manejo de eventos del DOM.
-* [ ] [Manipulación dinámica del DOM.](https://developer.mozilla.org/es/docs/Referencia_DOM_de_Gecko/Introducci%C3%B3n)
+* [x] Uso de selectores del DOM.
+* [x] Manejo de eventos del DOM.
+* [x] Manipulación dinámica del DOM.
 (appendChild |createElement | createTextNode| innerHTML | textContent | etc.)
 
 ### JavaScript
 
-* [ ] Manipulación de strings.
-* [ ] Uso de condicionales (if-else | switch | operador ternario)
-* [ ] Uso de bucles (for | for..in | for..of | while)
-* [ ] Uso de funciones (parámetros | argumentos | valor de retorno)
-* [ ] Declaración correcta de variables (const & let)
+* [x] Manipulación de strings.
+* [x] Uso de condicionales (if-else | switch | operador ternario)
+* [x] Uso de bucles (for | for..in | for..of | while)
+* [x] Uso de funciones (parámetros | argumentos | valor de retorno)
+* [x] Declaración correcta de variables (const & let)
 
 ### Testing
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* [x] Testeo unitario
 
 ### Estructura del código y guía de estilo
 
-* [ ] Organizar y dividir el código en módulos (Modularización)
-* [ ] Uso de identificadores descriptivos (Nomenclatura | Semántica)
-* [ ] Uso de linter (ESLINT)
+* [x] Organizar y dividir el código en módulos (Modularización)
+* [x] Uso de identificadores descriptivos (Nomenclatura | Semántica)
+* [x] Uso de linter (ESLINT)
 
 ### Git y GitHub
 
-* [ ] Uso de comandos de git (add | commit | pull | status | push)
-* [ ] Manejo de repositorios de GitHub (clone | fork | gh-pages)
+* [x] Uso de comandos de git (add | commit | pull | status | push)
+* [x] Manejo de repositorios de GitHub (clone | fork | gh-pages)
 
 ### UX
 
 * [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-* [ ] Crear prototipos para obtener feedback e iterar.
+* [x] Crear prototipos para obtener feedback e iterar.
 * [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 
-## 4. Consideraciones generales
+## 4. Criterios de aceptación mínimos del proyecto
 
-* El equipo de coaches te dará un tiempo sugerido e indicaciones. Recuerda que cada una aprende a diferente ritmo.
-* El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
-  interfaz será desplegada usando GitHub pages. Si no sabes lo que es GitHub, no
-  te preocupes, lo aprenderás durante este proyecto.
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Usa este alfabeto simple (solamente mayúsculas y sin ñ):
+La página cifra/descifra este alfabeto simple (solamente mayúsculas y sin ñ):
 
 * A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 ### Definición del producto
+Los usuarios que lo usarian serían los preocupados por que se vulnere su privacidad al momento de conversar con sus contactos, amigos, familiares, etc. 
+Para definir como funcionaría la página hice un boceto en figma, que muestro a continuación:
 
-En el README.md, cuéntanos cómo pensaste en los usuarios y cuál fue tu proceso
-para definir el producto final a nivel de experiencia y de interfaz.
+En esta plantilla, plantee como quería que fuera el esquema según los requerimientos que se pedía.
 
-* Quiénes son los principales usuarios de producto.
-* Cuáles son los objetivos de estos usuarios en relación con tu producto.
-* Cómo crees que el producto que estás creando está resolviendo sus problemas.
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/plantilla.jpg)
+> Plantilla en figma 
+
+* Usuarios de producto: Las personas preocupadas por su confidencialidad 
+* Objetivos de estos usuarios: Usar la página para cifrar/descifrar mensajes y copiarlo y pegarlo en el app de mensajería.
+* Resolviendo sus problemas: De confidencialidad cuando quieren mandar mensajes que sean dificiles de traducir por la app, asi lo que envien será secreto :3
 
 ### Interfaz de usuario (UI)
 
-La interfaz debe permitir al usuario:
+La interfaz permite al usuario:
 
 * Elegir un desplazamiento (_offset_) indicando cuántas posiciones queremos que
   el cifrado desplace cada caracter.
@@ -371,3 +348,53 @@ Esta sección está para ayudarte a llevar un control de lo que vas completando.
 * [ ] Cifra/descifra minúsculas
 * [ ] Cifra/descifra _otros_ caracteres (espacios, puntuación, `ñ`, `á`, ...)
 * [ ] Permite usar un `offset` negativo.
+
+
+
+A continuación muestro como quedó el Juego de Trivia :
+
+En la pantalla de **BIENVENIDA**, se solicita al usuario su nombre para empezar a jugar.
+
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla1.jpg)
+> Pantalla de **INICIO**
+
+Una vez escriba su nombre debe darle click en **ENTRAR**
+
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla2.jpg)
+> Pantalla de **INICIO**
+
+En la pantalla **CATEGORIA**, se muestra el nombre del usuario a su vez, se solicita al usuario que seleccione una de las categorías. Una vez selecciona una de ellas, lo redireccionara a la sección de preguntas, de acuerdo a la categoría seleccionada.
+
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla3.jpg)
+> Pantalla de **CATEGORIA**
+
+En la pantalla **PREGUNTAS** , si el usuario no selecciona nada, se agota su tiempo de 10 segundos.
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla4.jpg)
+> Pantalla de **PREGUNTAS** (Aparece un timer que contabiliza un tiempo para pasar a la siguiente pregunta)
+
+En la pantalla **PREGUNTAS** , al agotarse el tiempo pasa a la siguiente pregunta automaticamente.
+
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla5.jpg)
+> Pantalla de **PREGUNTAS** (Aparece un timer que contabiliza un tiempo para pasar a la siguiente pregunta)
+
+En la pantalla **PREGUNTAS** , el usuario selecciona una opción de respuesta, si esta es correcta el juego le avisará y a su vez se desactivaran todas las respuestas, debe darle click a **NEXT**.
+
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla6.jpg)
+> Pantalla de **PREGUNTAS** (Aparece un timer que contabiliza un tiempo para pasar a la siguiente pregunta)
+
+En la pantalla **PREGUNTAS** , el usuario selecciona una opción de respuesta, si esta es incorrecta el juego le avisará y a su vez se desactivaran todas las respuestas, debe darle click a **NEXT**.
+
+![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla7.jpg)
+> Pantalla de **PREGUNTAS** (Aparece un timer que contabiliza un tiempo para pasar a la siguiente pregunta)
+
+En la pantalla **RESULTADOS** se muestra las respuestas, e indica cuáles fueron correctas y cuáles fueron incorrectas. Asimismo, el usuario tiene la opción de volver a jugar, o finalizar el juego.
+
+![](https://raw.githubusercontent.com/sgcm14/LIM015-trivia/master/img/doc/8.jpg)
+> Pantalla de **RESULTADOS** (Al cerrar sesión, se inicia el juego nuevamente)
+
+
+**Realizado por :** 
+
+Sammy Gigi Cantoral Montejo (sgcm14)
+
+![](https://edteam-media.s3.amazonaws.com/users/avatar/16f3b00c-18cf-43f5-af5f-f9692fa3e5f1.jpg)
