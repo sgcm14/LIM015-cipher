@@ -11,7 +11,7 @@ Cifrado César (Laboratoria)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
 * [4. Criterios que cumple el proyecto](#4-criterios-que-cumple-el-proyecto)
-* [5. Funcionaliddad del proyecto](#5-funcionaliddad-del-proyecto)
+* [5. Consideraciones técnicas](#5-consideraciones-técnicas)
 
 
 ***
@@ -85,7 +85,7 @@ Los objetivos en general son los siguientes, de los cuáles utilicé los que est
 * [x] Crear prototipos para obtener feedback e iterar.
 * [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 
-## 4. Criterios que cumple el proyecto:
+## 4. Criterios que cumple el proyecto
 
 La página cifra/descifra este alfabeto simple :
 
@@ -94,27 +94,54 @@ La página cifra/descifra este alfabeto simple :
 * **espacio** ! " # $ % & ' ( ) * + , - . / 0 1 2 3 4 5 6 7 8 9 : ; < = > ? @
 
 
+* [x] `README.md` incluye info sobre proceso y decisiones de diseño.
+* [x] `README.md` explica claramente quiénes son los usuarios y su relación con
+  el producto.
+* [x] `README.md` explica claramente cómo el producto soluciona los
+  problemas/necesidades de los usuarios.
+* [x] Usa VanillaJS.
+* [x] Implementa `cipher.encode`.
+* [x] Implementa `cipher.decode`.
+* [x] Pasa linter con configuración provista.
+* [x] Pasa pruebas unitarias.
+* [x] Pruebas unitarias cubren 70% de _statements_, _functions_ y _lines_, y un
+  mínimo del 50% de _branches_.
+* [x] Interfaz permite elegir el `offset` o _desplazamiento_ a usar en el
+  cifrado/descifrado.
+* [x] Permite usar un `offset` positivo.
+* [x] Permite usar un `offset` negativo.
+* [x] Interfaz permite escribir un texto para ser cifrado.
+* [x] Interfaz muestra el resultado del cifrado correctamente.
+* [x] Interfaz permite escribir un texto para ser descifrado.
+* [x] Interfaz muestra el resultado del descifrado correctamente.
 * [x] Cifra/descifra mayúsculas
 * [x] Cifra/descifra minúsculas
 * [x] Cifra/descifra _caracteres_ (espacio, signos de exclamación, números, ...)
 * [ ] Cifra/descifra _otros_ caracteres (letras tíldadas, `ñ`, `á`, ...)
-* [x] Permite usar un `offset` positivo.
-* [x] Permite usar un `offset` negativo.
 
 ### Definición del producto
+
+#### ¿Quiénes son los principales usuarios de producto?
+
 Los usuarios que lo usarian serían los jóvenes ya que son los más preocupados por que se vulnere su privacidad al momento de conversar con sus contactos, amigos, familiares, etc. 
+
+#### ¿Cuáles son los objetivos de estos usuarios en relación con tu producto?
+
+Usar la página para cifrar/descifrar mensajes y copiarlo y pegarlo en el app de mensajería.
+
+#### ¿Cómo el producto que estás creando está resolviendo sus problemas?
+
+Resolveria sus problemas de confidencialidad cuando quieren mandar mensajes que sean dificiles de traducir por la app, asi lo que envien será secreto
+
+
+### Interfaz de usuario (UI)
+
 Para definir como funcionaría la página hice un boceto en figma, que muestro a continuación:
 
 En esta plantilla, plantee como quería que fuera el esquema según los requerimientos que se pedía.
 
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/plantilla.jpg)
 > Plantilla en figma 
-
-* Usuarios de producto: Las personas preocupadas por su confidencialidad 
-* Objetivos de estos usuarios: Usar la página para cifrar/descifrar mensajes y copiarlo y pegarlo en el app de mensajería.
-* Resolviendo sus problemas: De confidencialidad cuando quieren mandar mensajes que sean dificiles de traducir por la app, asi lo que envien será secreto :3
-
-### Interfaz de usuario (UI)
 
 La interfaz permite al usuario:
 
@@ -124,7 +151,7 @@ La interfaz permite al usuario:
 * Insertar un mensaje (texto) a descifrar.
 * Ver el resultado del mensaje descifrado.
 
-## 5. Funcionaliddad del proyecto:
+### Implementación de la Interfaz de usuario (HTML/CSS/JS)
 
 A continuación se muestra el funcionamiento de la página :
 
@@ -163,6 +190,40 @@ Al darle click en **Descifrar**, te devuelve el mensaje descifrado
 ![](https://raw.githubusercontent.com/sgcm14/LIM015-cipher/main/src/img/pantalla7.jpg)
 > Pantalla de **INICIO**  opción *Descifrar*
 
+### Test Unitarios
+
+Los tests unitarios tienen una cobertura del mas 70% de _statements_, _functions_,
+ _lines_, y  de _branches_.
+
+## 5. Consideraciones técnicas
+
+La lógica del proyecto esta implementada completamente en JavaScript. En
+este proyecto NO se ha usado librerías o frameworks, solo JavaScript puro
+también conocido como Vanilla JavaScript.
+
+### `src/index.html`
+
+  Este es el punto de entrada de la aplicación. Este archivo
+  contiene el _markup_ (HTML) e incluye el CSS y JavaScript necesario.
+
+### `src/cipher.js`
+
+  Acá se implementó el objeto `cipher`. Este objeto (`cipher`) contiene dos métodos:
+  * `cipher.encode(offset, string)`: `offset` es el número de posiciones que
+    queremos mover a la derecha en el alfabeto y `string` el mensaje (texto)
+    que queremos cifrar.
+  * `cipher.decode(offset, string)`: `offset` es el número de posiciones que
+    queremos mover a la izquierda en el alfabeto y `string` el mensaje
+    (texto) que queremos descifrar.
+
+### `src/index.js`
+
+  Acá se escucha los eventos del DOM, invocamos `cipher.encode()`
+  o `cipher.decode()` según sea necesario y actualizamos el resultado en la UI.
+
+### `test/cipher.spec.js`
+
+  Los tests implementados para `cipher.encode()` y `cipher.decode()`.
 
 **Realizado por :** 
 
